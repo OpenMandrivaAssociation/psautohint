@@ -1,27 +1,28 @@
 Name:		psautohint
 Summary:	A standalone version of AFDKO’s autohinter
 Version:	2.0.0
-Release:	%mkrel 1
+Release:	1
 License:	ASL 2.0
 Group:		Text tools
 Url:		https://github.com/adobe-type-tools/psautohint
 Source0:	https://github.com/adobe-type-tools/psautohint/releases/download/v%{version}/psautohint-%{version}.zip
-Patch0:		psautohint-1.8.1-linking.patch
+#Patch0:		psautohint-1.8.1-linking.patch
 BuildRequires:	python3-devel
 BuildRequires:	python3dist(setuptools)
-BuildRequires:	python3dist(setuptools-scm)
+#Not imported yet in OpenMandriva Cooker
+#BuildRequires:	python3dist(setuptools-scm)
 
 %description
 psautohint is a standalone version of the autohinter from the Adobe Font
 Development Kit for OpenType (AFDKO).
 
-%package -n python3-psautohint
+%package -n python-psautohint
 Summary:	Python library for standalone version of the AFDKO autohinter
 Group:		Development/Python
 Provides:	%{name} = %{version}-%{release}
-%{?python_provide:%python_provide python3-psautohint}
+%{?python_provide:%python_provide python-psautohint}
 
-%description -n python3-psautohint
+%description -n python-psautohint
 psautohint is a standalone version of the autohinter from the Adobe Font
 Development Kit for OpenType (AFDKO).
 
@@ -32,12 +33,12 @@ Development Kit for OpenType (AFDKO).
 rm -rf python/*.egg-info/
 
 %build
-%py3_build
+%py_build
 
 %install
-%py3_install
+%py_install
 
-%files -n python3-psautohint
+%files -n python-psautohint
 %license COPYING LICENSE
 %doc README.md
 %{_bindir}/psautohint
