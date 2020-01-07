@@ -9,8 +9,7 @@ Source0:	https://github.com/adobe-type-tools/psautohint/releases/download/v%{ver
 #Patch0:		psautohint-1.8.1-linking.patch
 BuildRequires:	python3-devel
 BuildRequires:	python3dist(setuptools)
-#Not imported yet in OpenMandriva Cooker
-#BuildRequires:	python3dist(setuptools-scm)
+BuildRequires:	python3dist(setuptools-scm)
 
 %description
 psautohint is a standalone version of the autohinter from the Adobe Font
