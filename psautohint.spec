@@ -8,8 +8,9 @@ Url:		https://github.com/adobe-type-tools/psautohint
 Source0:	https://github.com/adobe-type-tools/psautohint/releases/download/v%{version}/psautohint-%{version}.zip
 #Patch0:		psautohint-1.8.1-linking.patch
 BuildRequires:	python3-devel
-BuildRequires:	python3dist(setuptools)
-BuildRequires:	python3dist(setuptools-scm)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(setuptools-scm)
+BuildRequires:	python%{pyver}dist(pip)
 
 %description
 psautohint is a standalone version of the autohinter from the Adobe Font
