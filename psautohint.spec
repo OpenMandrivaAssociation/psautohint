@@ -44,3 +44,4 @@ rm -rf python/*.egg-info/
 %{_bindir}/psautohint
 %{_bindir}/psstemhist
 %{python3_sitearch}/psautohint/
+%{python3_sitearch}/psautohint-%{version}.dist-info
