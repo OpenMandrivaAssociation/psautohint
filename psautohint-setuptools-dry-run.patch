@@ -1,0 +1,13 @@
+setuptools 84 dropped the dry_run argument from distutils.ccompiler.new_compiler().
+A normal build never sets dry_run, matching current setuptools build_ext.
+diff -up psautohint-2.0.0/setup.py psautohint-dry-run/setup.py
+--- psautohint-2.0.0/setup.py	2026-10-14
++++ psautohint-dry-run/setup.py	2026-10-14
+@@ -201,7 +201,6 @@ class build_exe(Command):
+         # compiling and linking
+         self.compiler = new_compiler(compiler=self.compiler,
+                                      verbose=self.verbose,
+-                                     dry_run=self.dry_run,
+                                      force=self.force)
+         customize_compiler(self.compiler)
+ 

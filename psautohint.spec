@@ -7,6 +7,7 @@ Group:		Text tools
 Url:		https://github.com/adobe-type-tools/psautohint
 Source0:	https://github.com/adobe-type-tools/psautohint/releases/download/v%{version}/psautohint-%{version}.zip
 #Patch0:		psautohint-1.8.1-linking.patch
+Patch0:		psautohint-setuptools-dry-run.patch
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(setuptools-scm)
