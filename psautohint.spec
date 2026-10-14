@@ -1,13 +1,13 @@
 Name:		psautohint
 Summary:	A standalone version of AFDKO’s autohinter
 Version:	2.0.0
-Release:	2
+Release:	3
 License:	ASL 2.0
 Group:		Text tools
 Url:		https://github.com/adobe-type-tools/psautohint
 Source0:	https://github.com/adobe-type-tools/psautohint/releases/download/v%{version}/psautohint-%{version}.zip
 #Patch0:		psautohint-1.8.1-linking.patch
-BuildRequires:	python3-devel
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(setuptools-scm)
 BuildRequires:	python%{pyver}dist(pip)
